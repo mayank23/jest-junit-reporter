@@ -37,3 +37,9 @@ it('should produce a valid JUnit XML report', () => {
   const errors = schema.validate(report);
   expect(errors).toBeNull();
 });
+
+
+it('it should return the test results.', () => {
+  const result = reporter(mock);
+  expect(result).toEqual(mock);
+});
